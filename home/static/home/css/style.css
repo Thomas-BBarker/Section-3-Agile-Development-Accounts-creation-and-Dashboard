@@ -113,3 +113,92 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+.account-form {
+    background-color: white;
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 35px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+}
+
+.account-form h2 {
+    color: #174c5b;
+    margin-top: 0;
+}
+
+.account-form form p {
+    margin-bottom: 18px;
+}
+
+.account-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.account-form input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+    border-radius: 4px;
+}
+
+.account-form .helptext {
+    display: block;
+    color: #666666;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.account-form ul {
+    color: #666666;
+    font-size: 13px;
+    padding-left: 20px;
+}
+
+.account-link {
+    margin-top: 25px;
+}
+
+.account-link a {
+    color: #174c5b;
+    font-weight: bold;
+}
+
+.form-error {
+    background-color: #ffe5e5;
+    color: #8b0000;
+    padding: 12px;
+    border-radius: 4px;
+}
+
+.dashboard-section {
+    max-width: 900px;
+    margin: auto;
+}
+
+.dashboard-card {
+    background-color: white;
+    margin-top: 30px;
+    padding: 30px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+}
+
+.logout-form {
+    display: inline;
+}
+
+.logout-button {
+    background: none;
+    color: white;
+    padding: 0;
+    font: inherit;
+}
+
+.logout-button:hover {
+    background: none;
+    text-decoration: underline;
+}

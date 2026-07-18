@@ -1,0 +1,82 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Login</title>
+
+    <link
+        rel="stylesheet"
+        href="{% static 'home/css/style.css' %}"
+    >
+</head>
+
+<body>
+
+    <header>
+        <h1>Digital Footprint Risk Assessment</h1>
+
+        <nav>
+            <a href="{% url 'home:home' %}">Home</a>
+
+            <a href="{% url 'home:information-centre' %}">
+                Information Centre
+            </a>
+
+            <a href="{% url 'accounts:register' %}">
+                Register
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="account-form">
+            <h2>Log in</h2>
+
+            <p>
+                Enter your username and password to access your dashboard.
+            </p>
+
+            {% if form.errors %}
+                <p class="form-error">
+                    The username or password was incorrect.
+                </p>
+            {% endif %}
+
+            <form method="post">
+                {% csrf_token %}
+
+                {{ form.as_p }}
+
+                {% if next %}
+                    <input
+                        type="hidden"
+                        name="next"
+                        value="{{ next }}"
+                    >
+                {% endif %}
+
+                <button type="submit">
+                    Log in
+                </button>
+            </form>
+
+            <p class="account-link">
+                Do not have an account?
+
+                <a href="{% url 'accounts:register' %}">
+                    Register here
+                </a>
+            </p>
+        </section>
+    </main>
+
+</body>
+</html>
